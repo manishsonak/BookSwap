@@ -14,7 +14,7 @@ const MyBooks = () => {
   // 🧠 fetch user’s books
   const fetchMyBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/books/my", {
+      const res = await axios.get("https://bookswap-yi4i.onrender.com/api/books/my", {
         withCredentials: true,
       });
       setBooks(res.data);
@@ -33,7 +33,7 @@ const MyBooks = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/books", formData, {
+      await axios.post("https://bookswap-yi4i.onrender.com/api/books", formData, {
         withCredentials: true,
       });
       toast.success("Book added successfully!");
@@ -47,7 +47,7 @@ const MyBooks = () => {
   // ❌ delete a book
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/books/${id}`, {
+      await axios.delete(`https://bookswap-yi4i.onrender.com/api/books/${id}`, {
         withCredentials: true,
       });
       toast.info("Book deleted");

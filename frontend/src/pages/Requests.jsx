@@ -12,7 +12,7 @@ const Requests = () => {
     if (!user) return;
 
     try {
-      const resReceived = await axios.get("http://localhost:5000/api/requests/received", {
+      const resReceived = await axios.get("https://bookswap-yi4i.onrender.com/api/requests/received", {
         withCredentials: true,
       });
 
@@ -21,7 +21,7 @@ const Requests = () => {
       );
       setReceived(filteredReceived);
 
-      const resSent = await axios.get("http://localhost:5000/api/requests/sent", {
+      const resSent = await axios.get("https://bookswap-yi4i.onrender.com/api/requests/sent", {
         withCredentials: true,
       });
       setSent(resSent.data);
@@ -38,7 +38,7 @@ const Requests = () => {
   const handleAction = async (id, action) => {
     try {
       await axios.patch(
-        `http://localhost:5000/api/requests/${id}`,
+        `https://bookswap-yi4i.onrender.com/api/requests/${id}`,
         { status: action },
         { withCredentials: true }
       );

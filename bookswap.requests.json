@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "6900a6d52a1e66a5a6587fde"
+  },
+  "requester": {
+    "$oid": "6900a63e2a1e66a5a6587f82"
+  },
+  "book": {
+    "$oid": "6900a5b82a1e66a5a6587f6b"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-10-28T11:19:49.227Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:19:49.227Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6900a6ef2a1e66a5a6588011"
+  },
+  "requester": {
+    "$oid": "6900a5482a1e66a5a6587f58"
+  },
+  "book": {
+    "$oid": "6900a6c22a1e66a5a6587fa9"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-10-28T11:20:15.359Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:20:15.359Z"
+  },
+  "__v": 0
+}]

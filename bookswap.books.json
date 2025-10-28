@@ -1,0 +1,114 @@
+[{
+  "_id": {
+    "$oid": "6900a5b82a1e66a5a6587f6b"
+  },
+  "user": {
+    "$oid": "6900a5482a1e66a5a6587f58"
+  },
+  "title": "Harry Potter and the Half-Blood Prince",
+  "author": "J.K. Rowling",
+  "condition": "Good",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg",
+  "createdAt": {
+    "$date": "2025-10-28T11:15:04.113Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:15:04.113Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6900a5da2a1e66a5a6587f70"
+  },
+  "user": {
+    "$oid": "6900a5482a1e66a5a6587f58"
+  },
+  "title": "The Fault in Our Stars",
+  "author": "John Green",
+  "condition": "New",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
+  "createdAt": {
+    "$date": "2025-10-28T11:15:38.037Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:15:38.037Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6900a6272a1e66a5a6587f7d"
+  },
+  "user": {
+    "$oid": "6900a5482a1e66a5a6587f58"
+  },
+  "title": "Matilda",
+  "author": "Roald Dahl",
+  "condition": "Very Good",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/817tHNcyAgL.jpg",
+  "createdAt": {
+    "$date": "2025-10-28T11:16:55.051Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:16:55.051Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6900a6622a1e66a5a6587f9f"
+  },
+  "user": {
+    "$oid": "6900a63e2a1e66a5a6587f82"
+  },
+  "title": "The Girl With the Dragon Tattoo",
+  "author": "Stieg Larsson",
+  "condition": "Excellent",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/81y7OXfG1gL.jpg",
+  "createdAt": {
+    "$date": "2025-10-28T11:17:54.738Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:17:54.738Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6900a68d2a1e66a5a6587fa4"
+  },
+  "user": {
+    "$oid": "6900a63e2a1e66a5a6587f82"
+  },
+  "title": "The Bluest Eye",
+  "author": "Toni Morrison",
+  "condition": "Good",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg",
+  "createdAt": {
+    "$date": "2025-10-28T11:18:37.024Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:18:37.024Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6900a6c22a1e66a5a6587fa9"
+  },
+  "user": {
+    "$oid": "6900a63e2a1e66a5a6587f82"
+  },
+  "title": "The Curious Incident of the Dog in the Night-Time",
+  "author": "Mark Haddon",
+  "condition": "Like New",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/91Q5dCjc2KL.jpg",
+  "createdAt": {
+    "$date": "2025-10-28T11:19:30.967Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:19:30.967Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "6900a5482a1e66a5a6587f58"
+  },
+  "name": "manish Sonak",
+  "email": "manish@gmail.com",
+  "password": "$2b$10$YSvJyEmaoZfXLUTFvk42euPAJOgq5qyFkZjnOtbyiLQXOSIbHZIG2",
+  "createdAt": {
+    "$date": "2025-10-28T11:13:12.515Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:13:12.515Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6900a63e2a1e66a5a6587f82"
+  },
+  "name": "manish Sonak",
+  "email": "manish9@gmail.com",
+  "password": "$2b$10$ZRNWBUALqNuoFf43ZrvEqOUp1WLCvAvYzJPr4DzBxDfJ75Z204xIi",
+  "createdAt": {
+    "$date": "2025-10-28T11:17:18.994Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-28T11:17:18.994Z"
+  },
+  "__v": 0
+}]
