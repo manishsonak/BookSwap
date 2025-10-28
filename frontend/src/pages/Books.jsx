@@ -11,7 +11,7 @@ const Books = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/books", {
+        const res = await axios.get("https://bookswap-yi4i.onrender.com/api/books", {
           withCredentials: true,
         });
         setBooks(res.data);
@@ -24,7 +24,7 @@ const Books = () => {
     const fetchRequests = async () => {
       if (!user) return;
       try {
-        const res = await axios.get("http://localhost:5000/api/requests/sent", {
+        const res = await axios.get("https://bookswap-yi4i.onrender.com/api/requests/sent", {
           withCredentials: true,
         });
         setRequests(res.data);
@@ -40,7 +40,7 @@ const Books = () => {
   const handleRequest = async (bookId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/requests",
+        "https://bookswap-yi4i.onrender.com/api/requests",
         { bookId },
         { withCredentials: true }
       );

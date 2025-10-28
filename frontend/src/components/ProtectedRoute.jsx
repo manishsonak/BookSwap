@@ -13,7 +13,7 @@ const ProtectedRoute = ({ children }) => {
       try {
         // Agar user state empty hai, backend se check karo
         if (!user) {
-          const res = await axios.get("http://localhost:5000/api/auth/me", {
+          const res = await axios.get("https://bookswap-yi4i.onrender.com/api/auth/me", {
             withCredentials: true,
           });
           setUser(res.data.user); // AuthContext me set karo

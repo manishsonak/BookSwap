@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/logout", {}, { withCredentials: true });
+      await axios.post("https://bookswap-yi4i.onrender.com/api/auth/logout", {}, { withCredentials: true });
     } catch (err) {
       console.log("Logout error:", err.response?.data);
     }

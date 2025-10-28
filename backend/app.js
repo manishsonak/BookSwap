@@ -13,7 +13,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: "http://localhost:5173", 
+  origin: "https://bookswap-yi4i.onrender.com/", 
   credentials: true, 
 }));
 app.use(express.json());

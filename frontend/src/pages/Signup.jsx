@@ -19,7 +19,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:5000/api/users/signup",
+        "https://bookswap-yi4i.onrender.com/api/users/signup",
         { name, email, password },
         { withCredentials: true }
       );
