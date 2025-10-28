@@ -12,11 +12,10 @@ dotenv.config();
 connectDB();
 
 const app = express();
-import cors from "cors";
 
 app.use(cors({
-  origin: "https://book-swap-red.vercel.app", // FRONTEND URL
-  credentials: true, // cookies / authentication
+  origin: "https://book-swap-red.vercel.app", 
+  credentials: true, 
 }));
 
 app.use(express.json());
