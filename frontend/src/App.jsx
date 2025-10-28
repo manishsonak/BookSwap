@@ -21,7 +21,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/requests" element={<ProtectedRoute><Requests /></ProtectedRoute>} />
           <Route path="/my-books" element={<ProtectedRoute><MyBooks /></ProtectedRoute>} />
-          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+          {/* <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} /> */}
         </Routes>
       </div>
     </BrowserRouter>

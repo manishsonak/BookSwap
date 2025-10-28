@@ -83,7 +83,8 @@ const Navbar = () => {
               <Link to="/books" onClick={() => setMenuOpen(false)}>Books</Link>
               <Link to="/my-books" onClick={() => setMenuOpen(false)}>My Books</Link>
               <Link to="/requests" onClick={() => setMenuOpen(false)}>Requests</Link>
-              <Link to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link>
+            <p className="text-center text-sm "><b> {user.name.split(" ")[0].toUpperCase()} </b></p>
+              {/* <Link to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link> */}
               <button
                 onClick={() => {
                   handleLogout();
