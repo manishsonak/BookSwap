@@ -12,10 +12,13 @@ dotenv.config();
 connectDB();
 
 const app = express();
+import cors from "cors";
+
 app.use(cors({
-  origin: "https://bookswap-yi4i.onrender.com", 
-  credentials: true, 
+  origin: "https://book-swap-red.vercel.app", // FRONTEND URL
+  credentials: true, // cookies / authentication
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 
