@@ -16,12 +16,11 @@ export const registerUser = async (req, res) => {
 
     const token = generateToken(user._id);
 
-    
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60 * 1000, 
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
     res.status(201).json({
@@ -45,12 +44,11 @@ export const loginUser = async (req, res) => {
 
     const token = generateToken(user._id);
 
-    
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
     res.json({
@@ -63,7 +61,6 @@ export const loginUser = async (req, res) => {
   }
 };
 
-
 export const updateUser = async (req, res) => {
   const userId = req.user._id;
   const { name, email } = req.body;
@@ -72,14 +69,13 @@ export const updateUser = async (req, res) => {
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: "User not found" });
 
-    if(!name && !email) return res.status(400).json({
-        msg:"Provide at least one field to update"
-    })
+    if (!name && !email)
+      return res.status(400).json({
+        msg: "Provide at least one field to update",
+      });
 
-        if(name) user.name=name;
-        if(email) user.email=email
-
-
+    if (name) user.name = name;
+    if (email) user.email = email;
 
     const updatedUser = await user.save();
 
@@ -93,7 +89,6 @@ export const updateUser = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 
 export const logoutUser = (req, res) => {
   res.clearCookie("token");
