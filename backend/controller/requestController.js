@@ -1,7 +1,7 @@
 import Request from "../models/requestModel.js";
 import Book from "../models/bookModel.js";
 
-// 🟢 Send a book request
+
 export const sendRequest = async (req, res) => {
   const { bookId } = req.body;
 
@@ -11,12 +11,12 @@ export const sendRequest = async (req, res) => {
     const book = await Book.findById(bookId);
     if (!book) return res.status(404).json({ msg: "Book not found" });
 
-    // Prevent requesting your own book
+    
     if (book.user.toString() === req.user._id.toString()) {
       return res.status(400).json({ msg: "Cannot request your own book" });
     }
 
-    // Check if request already exists
+    
     const existing = await Request.findOne({
       requester: req.user._id,
       book: bookId,
@@ -34,24 +34,24 @@ export const sendRequest = async (req, res) => {
   }
 };
 
-// 🟢 Get requests sent by the logged-in user
+
 export const getSentRequests = async (req, res) => {
   try {
-  // Fetch all requests made by the logged-in user
+  
   
  const requests = await Request.find({ requester: req.user._id })
-  .populate('requester', 'name email')          // Requester info
+  .populate('requester', 'name email')        
   .populate({
-    path: 'book',                               // Pehle book populate karo
+    path: 'book',                             
     select: 'title author condition image',
-    populate: {                                 // Uske andar user populate karo
+    populate: {                               
       path: 'user',
       select: 'name email'
     }
   });
 
     
-    // Book owner ka name & email
+    
 
   res.json(requests);
 } catch (error) {
@@ -61,19 +61,19 @@ export const getSentRequests = async (req, res) => {
 
 };
 
-// 🟢 Get requests received for the logged-in user’s books
+
 export const getReceivedRequests = async (req, res) => {
   try {
      const requests = await Request.find()
       .populate({
         path: "book",
-        match: { user: req.user._id }, // Only books owned by current user
+        match: { user: req.user._id }, 
         select: "title author condition image user",
-        populate: { path: "user", select: "name email" }, // populate book owner
+        populate: { path: "user", select: "name email" }, 
       })
       .populate("requester", "name email");
 
-    // Filter out requests not belonging to user's books
+    
     const filtered = requests.filter((r) => r.book !== null);
 
     res.json(filtered);
@@ -82,9 +82,9 @@ export const getReceivedRequests = async (req, res) => {
   }
 };
 
-// 🟢 Update request status (accept/decline)
+
 export const updateRequestStatus = async (req, res) => {
-  const { status } = req.body; // expected: "accepted" or "declined"
+  const { status } = req.body; 
   const { id } = req.params;
 
   if (!["accepted", "declined"].includes(status)) {
@@ -95,7 +95,7 @@ export const updateRequestStatus = async (req, res) => {
     const request = await Request.findById(id).populate("book");
     if (!request) return res.status(404).json({ msg: "Request not found" });
 
-    // Only book owner can update the status
+    
     if (request.book.user.toString() !== req.user._id.toString()) {
       return res.status(403).json({ msg: "Not authorized to update this request" });
     }

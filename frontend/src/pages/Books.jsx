@@ -45,10 +45,10 @@ const Books = () => {
         { withCredentials: true }
       );
       toast.success("Request sent!");
-      // Add to local state to hide button immediately
+      
       setRequests((prev) => [...prev, { book: { _id: bookId } }]);
     } catch (err) {
-      // If backend responds "already sent", still mark locally
+      
       if (err.response?.data?.msg === "Request already sent") {
         setRequests((prev) => [...prev, { book: { _id: bookId } }]);
       }
@@ -57,7 +57,7 @@ const Books = () => {
     }
   };
 
-  // Check if request already sent for this book
+  
   const isRequested = (bookId) => {
     return requests.some((req) => req.book._id === bookId);
   };

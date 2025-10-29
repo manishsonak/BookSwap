@@ -1,4 +1,4 @@
-// src/context/AuthContext.jsx
+
 import { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // check if user is in localStorage (optional)
+  
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     

@@ -14,7 +14,7 @@ export default function Home() {
         const res = await axios.get("https://bookswap-yi4i.onrender.com/api/books", {
           withCredentials: true,
         });
-        setBooks(res.data.slice(0, 6)); // featured / first 6 books
+        setBooks(res.data.slice(0, 6)); 
       } catch (err) {
         toast.error("Failed to load books");
         console.log(err);
