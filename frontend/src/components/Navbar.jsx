@@ -80,7 +80,7 @@ const Navbar = () => {
         <div className="md:hidden mt-2 flex flex-col gap-2 bg-blue-700 p-4 rounded-lg">
           {user ? (
             <>
-              <Link to="/books" onClick={() => setMenuOpen(false)}>Books</Link>
+              {/* <Link to="/books" onClick={() => setMenuOpen(false)}>Books</Link> */}
               <Link to="/my-books" onClick={() => setMenuOpen(false)}>My Books</Link>
               <Link to="/requests" onClick={() => setMenuOpen(false)}>Requests</Link>
             <p className="text-center text-sm "><b> {user.name.split(" ")[0].toUpperCase()} </b></p>
